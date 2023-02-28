@@ -1,15 +1,819 @@
-<!DOCTYPE html>
+<!doctypehtml>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WeGoGym</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>You've reached the homepage of WeGoGym.</h1>
+<meta charset="UTF-8">
+<title>WeGoGym</title>
+<meta content="" name="description">
+<meta content="WeGoGym" property="og:title">
+<meta content="" property="og:description">
+<!--<meta content= "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg" property="og:image">
+<meta property="og:type" content="website">
+<meta content="WeGoGym" property="twitter:title">
+<meta content="" property="twitter:description">
+<meta content="https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg" property="twitter:image">
+<meta content="summary_large_image" name="twitter:card">-->
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+<link href="https://i.kym-cdn.com/entries/icons/original/000/031/015/cover5.jpg" rel="shortcut icon" type="image/x-icon">
+<link href="https://i.kym-cdn.com/entries/icons/original/000/031/015/cover5.jpg" rel="icon">
+<link href="https://i.kym-cdn.com/entries/icons/original/000/031/015/cover5.jpg" rel="shortcut icon" type="image/x-icon">
+<link href="https://i.kym-cdn.com/entries/icons/original/000/031/015/cover5.jpg" rel="apple-touch-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="csswegogym.css">
+<body class="active-dark-mode">
+    <header class="rn-header header-default header-left-align header-not-transparent">
+        <div class="position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-9 col-md-6 col-4 position-static">
+                    <div class="header-left d-flex">
+                        <div class="logo">
+                            <a href="./" class="blitz-logo-left">
+                                <img class="logo-light logo-height" src="https://i.kym-cdn.com/entries/icons/original/000/031/015/cover5.jpg" alt="WeGoGym Logo">
+                                <img class="logo-dark logo-height" src="https://i.kym-cdn.com/entries/icons/original/000/031/015/cover5.jpg" alt="WeGoGym Logo">
+                            </a>
+                        </div>
+                        <!--top menu-->
+                        <nav class="mainmenu-nav d-none d-lg-block">
+                            <ul class="mainmenu">
+                                <li>
+                                    <a href="./" title="Home - BLITZ LABS">
+                                        <span data-title="Home">Home</span>
+                                    </a>
+                                <li>
+                                    <a href="token.html" title="Token - BLITZ LABS">
+                                        <span data-title="Roadmap">Roadmap</span>
+                                    </a>
+                                <li>
+                                    <a href="staking.html" title="Staking - BLITZ LABS">
+                                        <span data-title="Team">Team</span>
+                                    </a>
+                                <li>
+                                    <a href="treasury.html" title="Treasury - BLITZ LABS">
+                                        <span data-title="Features">Features</span>
+                                    </a>
+                                <li>
+                                    <a href="https://docs.blitzlabs.io" title="BLITZ LABS Whitepaper" rel="nofollow" target="_blank">
+                                        <span data-title="Join Us">Join Us</span>
+                                    </a>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-8">
+                    <div class="header-right">
+                        <!--<div class="connect-group connect-group-md">
+                            <button type="button" class="btn-default btn-small round btn-connect d-flex align-items-center" onclick="connect()">
+                                <div>Sign Up/ Login</div>
+                            </button>
+                        </div>-->
+                        <button onclick="daynight()" data-theme="light" class="daynight setColor light btn btn-link">
+                            <div>
+                                <i class="fa-solid fa-sun light"></i>
+                                <i class="fa-solid fa-moon dark"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Header for mobile browser-->
+    <header class="rn-mobile-header header-default header-left-align header-not-transparent">
+        <div class="position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-9 col-md-6 col-4 position-static">
+                    <div class="header-left d-flex">
+                        <div class="logo">
+                            <a href="./" class="blitz-logo-left">
+                                <img class="logo-light logo-height" src="assets/Blitz.svg" alt="Blitz Logo">
+                                <img class="logo-dark logo-height" src="assets/Blitz-dark.svg" alt="Blitz Logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-8">
+                    <div class="header-right">
+                        <div class="connect-group-sm">
+                            <button type="button" class="btn-default btn-small round btn-connect-simple" onclick="connect()">
+                                <div>Sign Up/ Login</div>
+                            </button>
+                        </div>
+                        <button class="hamberger" onclick="toggleMenu()">
+                            <div>
+                                <img src="assets/hamberger-dark.svg" alt="" class="logo-dark">
+                                <img src="assets/hamberger.svg" alt="" class="logo-light">
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--This is the code for the left side social media bar-->
+    <nav class="rn-aside d-flex flex-column flex-shrink-0">
+        <a href="./" class="link-dark text-decoration-none blitz-logo mb-auto" title="">
+            <img class="logo-light logo-height" src="https://i.kym-cdn.com/entries/icons/original/000/031/015/cover5.jpg" alt="">
+            <img class="logo-dark logo-height" src="https://i.kym-cdn.com/entries/icons/original/000/031/015/cover5.jpg" alt="">
+        </a>
+        <ul class="nav nav-pills nav-flush flex-column text-center nav-socials d-none d-md-flex mb-3">
+            <li>
+                <a href="https://twitter.com/BlitzLabs_io" title="WeGoGym on Twitterr" rel="nofollow" target="_blank">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            <li>
+                <a href="https://t.me/BlitzLabs" title="WeGoGym on Instagram" rel="nofollow" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            <li>
+                <a href="https://discord.gg/blitzlabs" title="WeGoGym on Facebook" rel="nofollow" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            <li>
+                <a href="https://medium.com/@BlitzLabs.io" title="WeGoGym on Medium" rel="nofollow" target="_blank">
+                    <i class="fa-brands fa-medium"></i>
+                </a>
+            <li>
+                <a href="mailto: wegogym@yahoo.com" title="WeGoGym Email">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </a>
+        </ul>
+    </nav>
+    <!--Menu from mobile browser-->
+    <div class="popup-mobile-menu-bg">
+        <button id="hambergerClose" onclick="toggleMenu()">
+            <img src="assets/hambergerClose-dark.svg" alt="" class="logo-dark">
+            <img src="assets/hambergerClose.svg" alt="" class="logo-light">
+        </button>
+        <div class="popup-mobile-menu">
+            <div class="container">
+                <div class="inner d-flex justify-content-between flex-column">
+                    <div>
+                        <div class="header-top">
+                            <a href="./" class="blitz-logo-left">
+                                <img class="logo-light logo-height" src="assets/Blitz.svg" alt="WeGoGym Logo">
+                                <img class="logo-dark logo-height" src="assets/Blitz-dark.svg" alt="Blitz Logo">
+                            </a>
+                            <button onclick="daynight()" data-theme="light" class="daynight setColor light btn btn-link">
+                                <div>
+                                    <i class="fa-solid fa-sun light"></i>
+                                    <i class="fa-solid fa-moon dark"></i>
+                                </div>
+                            </button>
+                        </div>
+                        <ul class="mainmenu">
+                            <li>
+                                <a href="./" title="Home - BLITZ LABS">
+                                    <span data-title="Home">Home</span>
+                                </a>
+                            <li>
+                                <a href="token.html" title="Token - BLITZ LABS">
+                                    <span data-title="Token">Roadmap</span>
+                                </a>
+                            <li>
+                                <a href="staking.html" title="Staking - BLITZ LABS">
+                                    <span data-title="Staking">Team</span>
+                                </a>
+                            <li>
+                                <a href="treasury.html" title="Treasury - BLITZ LABS">
+                                    <span data-title="Treasury">Features</span>
+                                </a>
+                            <li>
+                                <a href="https://docs.blitzlabs.io" title="BLITZ LABS Whitepaper" rel="nofollow" target="_blank">
+                                    <span data-title="Whitepaper">Join Us</span>
+                                </a>
+                        </ul>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-end">
+                        <ul class="nav nav-pills nav-flush text-center nav-socials">
+                            <li>
+                                <a href="https://twitter.com/BlitzLabs_io" title="WeGoGym on Twitter" rel="nofollow" target="_blank">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            <li>
+                                <a href="https://t.me/BlitzLabs" title="WeGoGym on Instagram" rel="nofollow" target="_blank">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            <li>
+                                <a href="https://discord.gg/blitzlabs" title="WeGoGym on Facebook" rel="nofollow" target="_blank">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                            <li>
+                                <a href="https://medium.com/@BlitzLabs.io" title="WeGoGym on Medium" rel="nofollow" target="_blank">
+                                    <i class="fa-brands fa-medium"></i>
+                                </a>
+                            <li>
+                                <a href="mailto: wegogym@yahoo.com" title="WeGoGym Email">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="rn-bg">
+        <canvas id="fluid"></canvas>
+        <div class="rn-gradient-circle"></div>
+        <div class="rn-gradient-circle theme-pink"></div>
+    </div>
+    <!--The main tittle-->
+    <main class="page-wrapper" data-scroll-container>
+        <div class="slider-area hero bg-transparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 inner">
+                        <div class="home-title">
+                            <h1 class="title display-two display-contents">
+                                <span class="home-we" data-scroll data-scroll-speed="-.7" data-scroll-direction="vertical">
+                                    <span data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">WE</span>
+                                </span>
+                                <span class="home-ar" data-scroll data-scroll-speed="0.1" data-scroll-direction="vertical">
+                                    <span data-scroll data-scroll-speed="-0.5" data-scroll-direction="horizontal">ARE</span>
+                                </span>
+                                <span class="home-bl" data-scroll data-scroll-speed="-1" data-scroll-direction="vertical">
+                                    <span data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">WeGoGym</span>
+                                </span>
+                                <span class="home-la" data-scroll data-scroll-speed="-1.5" data-scroll-direction="vertical">
+                                    <span data-scroll data-scroll-speed="-0.4" data-scroll-direction="horizontal">Fitness</span>
+                                </span>
+                            </h1>
+                        </div>
+                        <!--Description section-->
+                        <div class="text-center py-5">
+                            <div class="description py-5">
+                                <div>
+                                    <div>
+                                        <b>WeGoGym</b>
+                                        is a WEB3 collective dedicated to developing multi-chain tools, services, and products that make basic crypto activities such as, but not limited to, participating in presales, exchanging tokens, bridging, as simple as possible and without unnecessary complexity.<br>
+                                        <br>
+                                    </div>
+                                    <div>Our ultimate goal is to create a one-stop shop where users can conveniently compile all of their tasks in one site while paying the least fees possible.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rbt-separator-mid">
+            <div class="container">
+                <hr class="rbt-separator m-0">
+            </div>
+        </div>
+        <div class="rn-service-area rn-section-gap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center pt-5">
+                            <h2>
+                                WeGoGym<span style="font-weight:400">Features</span>
+                            </h2>
+                            <div>
+                                <p>
+                                    Below you will find products and services developed by WeGoGym that have already been released or on which we are currently working.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row--15 service-wrapper">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 p-5">
+                        <div href="#" class="service gallery-style text-left service_0 service-link">
+                            <div class="inner">
+                                <div class="content text-center">
+                                    <div class="bluredImg">
+                                        <img src="assets/service_7.svg" alt="service_7.svg" class="imgA">
+                                        <img src="assets/service_7.svg" alt="service_7.svg" class="imgB">
+                                    </div>
+                                    <h3>
+                                        Group<span style="font-weight:400">Workout</span>
+                                    </h3>
+                                    <h6>One for all, All for one</h6>
+                                    <p>Decentralized multi-chain multi sender allowing anyone to efficiently send thousands of tokens to multiple addresses by batching the transfers and automating the process.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 p-5">
+                        <div href="#" class="service gallery-style text-left service_1 service-link">
+                            <div class="inner">
+                                <div class="content text-center">
+                                    <div class="bluredImg">
+                                        <img src="assets/service_7.svg" alt="service_7.svg" class="imgA">
+                                        <img src="assets/service_7.svg" alt="service_7.svg" class="imgB">
+                                    </div>
+                                    <h3>
+                                        AI<span style="font-weight:400">Workout Generator</span>
+                                    </h3>
+                                    <h6>The future of workout recommendations</h6>
+                                    <p>Decentralized multi-chain multi sender allowing anyone to efficiently send thousands of tokens to multiple addresses by batching the transfers and automating the process.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 p-5">
+                        <div href="#" class="service gallery-style text-left service_2 service-link">
+                            <div class="inner">
+                                <div class="content text-center">
+                                    <div class="bluredImg">
+                                        <img src="assets/service_7.svg" alt="service_7.svg" class="imgA">
+                                        <img src="assets/service_7.svg" alt="service_7.svg" class="imgB">
+                                    </div>
+                                    <h3>
+                                        Geolocal<span style="font-weight:400">Chat System</span>
+                                    </h3>
+                                    <h6>Finding Gymbros has never been easier</h6>
+                                    <p>Decentralized multi-chain multi sender allowing anyone to efficiently send thousands of tokens to multiple addresses by batching the transfers and automating the process.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="col-lg-4 col-md-6 col-sm-6 col-12 p-5">
+                        <div href="#" class="service gallery-style text-left service_3 service-link">
+                            <div class="inner">
+                                <div class="content text-center">
+                                    <div class="bluredImg">
+                                        <img src="assets/service_3.svg" alt="service_3.svg" class="imgA">
+                                        <img src="assets/service_3.svg" alt="service_3.svg" class="imgB">
+                                    </div>
+                                    <h3>
+                                        BLITZ<span style="font-weight:400">LOCK</span>
+                                    </h3>
+                                    <h6>MULTI-CHAIN SAFEGUARD</h6>
+                                    <p>
+                                        Decentralized safeguard that allows anyone to lock liquidity tokens or ERC20 team tokens with the option of adding a vesting period to your tokens.<br>
+                                        <br>
+                                        <a href="https://docs.blitzpad.io/for-creators/blitzlock">BLITZLock documentation</a>
+                                        <br>
+                                        <a href="https://blitzpad.io/lock">Go to BLITZLock</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 p-5">
+                        <div href="#" class="service gallery-style text-left service_7 service-link">
+                            <div class="inner">
+                                <div class="content text-center">
+                                    <div class="bluredImg">
+                                        <img src="assets/service_7.svg" alt="service_7.svg" class="imgA">
+                                        <img src="assets/service_7.svg" alt="service_7.svg" class="imgB">
+                                    </div>
+                                    <h3>
+                                        BLITZ<span style="font-weight:400">SENDER</span>
+                                    </h3>
+                                    <h6>JANUARY 2023</h6>
+                                    <p>Decentralized multi-chain multi sender allowing anyone to efficiently send thousands of tokens to multiple addresses by batching the transfers and automating the process.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 p-5">
+                        <div href="#" class="service gallery-style text-left service_4 service-link">
+                            <div class="inner">
+                                <div class="content text-center">
+                                    <div class="bluredImg">
+                                        <img src="assets/service_4.svg" alt="service_4.svg" class="imgA">
+                                        <img src="assets/service_4.svg" alt="service_4.svg" class="imgB">
+                                    </div>
+                                    <h3>
+                                        BLITZ<span style="font-weight:400">VAULT</span>
+                                    </h3>
+                                    <h6>JANUARY 2023</h6>
+                                    <p>Single-sided staking will be phased out , and dividend staking will be implemented. Rewards will be paid out in Stable Coins on a monthly basis.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 p-5">
+                        <div href="#" class="service gallery-style text-left service_6 service-link">
+                            <div class="inner">
+                                <div class="content text-center">
+                                    <div class="bluredImg">
+                                        <img src="assets/service_6.svg" alt="service_6.svg" class="imgA">
+                                        <img src="assets/service_6.svg" alt="service_6.svg" class="imgB">
+                                    </div>
+                                    <h3>
+                                        BLITZ<span style="font-weight:400">SWAP</span>
+                                    </h3>
+                                    <h6>TBA</h6>
+                                    <p>
+                                        A decentralized exchange aggregator that uses algorithmic routing technology to ensure that your trade is completed at the best possible price. Very user-friendly, advanced features, multi-chain compatibility, and lightning-fast speeds will empower your DeFi trading and provide you with the competitive advantage you require.<br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 p-5">
+                        <div href="#" class="service gallery-style text-left service_8 service-link">
+                            <div class="inner">
+                                <div class="content text-center">
+                                    <div class="bluredImg">
+                                        <img src="assets/service_8.svg" alt="service_8.svg" class="imgA">
+                                        <img src="assets/service_8.svg" alt="service_8.svg" class="imgB">
+                                    </div>
+                                    <h3>
+                                        BLITZ<span style="font-weight:400">BRIDGE</span>
+                                    </h3>
+                                    <h3></h3>
+                                    <h6>TBA</h6>
+                                    <p>
+                                        A quick, trustless, low-cost, and dependable method of exchanging value and data between blockchain networks. Framework designed for seamlessly arbitrary multi-chain interactions.<br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 p-5">
+                        <div href="#" class="service gallery-style text-left service_5 service-link">
+                            <div class="inner">
+                                <div class="content text-center">
+                                    <div class="bluredImg">
+                                        <img src="assets/service_5.svg" alt="service_5.svg" class="imgA">
+                                        <img src="assets/service_5.svg" alt="service_5.svg" class="imgB">
+                                    </div>
+                                    <h3>
+                                        BLITZ<span style="font-weight:400">FUTURE</span>
+                                    </h3>
+                                    <h6>TBA</h6>
+                                    <p>
+                                        Our team is constantly researching and studying the crypto space, which is evolving on a daily basis. Based on our findings, we intend to expand our ecosystem with additional utilities in the future.<br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="rbt-separator-mid">
+            <div class="container">
+                <hr class="rbt-separator m-0">
+            </div>
+        </div>
+        <!--Roaadmap section-->
+        <div class="rwt-timeline-area rn-section-gap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="400" data-sal-delay="150">
+                            <h2>
+                                WeGoGym<span style="font-weight:400">ROADMAP</span>
+                            </h2>
+                            <div>The roadmap currently contains primarily our main short- and medium-term plans, as well as high-priority tasks.</div>
+                            <div>As new products are introduced, the roadmap will be updated.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 mt--50">
+                        <div class="timeline-style-two bg-color-blackest">
+                            <div class="row row--0 row-progress-line row-progress-line--1">
+                                <div class="col-lg-3 col-md-3 rn-timeline-single no-gradient">
+                                    <div class="rn-timeline">
+                                        <div class="line-custom num0"></div>
+                                        <div class="progress-dot">
+                                            <div class="dot-level">
+                                                <div class="dot-inner"></div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <p>MVP Development<br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 rn-timeline-single no-gradient">
+                                    <div class="rn-timeline">
+                                        <div class="line-custom num1"></div>
+                                        <div class="progress-dot">
+                                            <div class="dot-level">
+                                                <div class="dot-inner"></div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <p>Website Launch<br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 rn-timeline-single no-gradient">
+                                    <div class="rn-timeline">
+                                        <div class="line-custom num2"></div>
+                                        <div class="progress-dot">
+                                            <div class="dot-level">
+                                                <div class="dot-inner"></div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <p>Pre-Seed Funding<br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 rn-timeline-single no-gradient">
+                                    <div class="rn-timeline">
+                                        <div class="line-custom num3"></div>
+                                        <div class="progress-dot">
+                                            <div class="dot-level">
+                                                <div class="dot-inner"></div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <p>Marketing Campaign<br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row--0 row-progress-line flex-md-row-reverse row-progress-line--2">
+                                <div class="col-lg-3 col-md-3 rn-timeline-single no-gradient">
+                                    <div class="rn-timeline">
+                                        <div class="line-custom num7"></div>
+                                        <div class="progress-dot">
+                                            <div class="dot-level">
+                                                <div class="dot-inner"></div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <p>App Development Completion<br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 rn-timeline-single no-gradient">
+                                    <div class="rn-timeline">
+                                        <div class="line-custom num6"></div>
+                                        <div class="progress-dot">
+                                            <div class="dot-level">
+                                                <div class="dot-inner"></div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <b>WeGoGym</b> Launch &nbsp;<br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 rn-timeline-single no-gradient">
+                                    <div class="rn-timeline">
+                                        <div class="line-custom num5"></div>
+                                        <div class="progress-dot">
+                                            <div class="dot-level">
+                                                <div class="dot-inner"></div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <p>Seed Funding<br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 rn-timeline-single no-gradient">
+                                    <div class="rn-timeline">
+                                        <div class="line-custom num4"></div>
+                                        <div class="progress-dot">
+                                            <div class="dot-level">
+                                                <div class="dot-inner"></div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <p>App Development Stage 2<br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row--0 row-progress-line row-progress-line--3">
+                                <div class="col-lg-3 col-md-3 rn-timeline-single no-gradient">
+                                    <div class="rn-timeline">
+                                        <div class="line-custom num8"></div>
+                                        <div class="progress-dot">
+                                            <div class="dot-level">
+                                                <div class="dot-inner"></div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <p>AI Features<br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 rn-timeline-single no-gradient">
+                                    <div class="rn-timeline">
+                                        <div class="line-custom num9"></div>
+                                        <div class="progress-dot">
+                                            <div class="dot-level">
+                                                <div class="dot-inner"></div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <p>Premium Membership features<br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 rn-timeline-single no-gradient">
+                                    <div class="rn-timeline">
+                                        <div class="line-custom num10"></div>
+                                        <div class="progress-dot">
+                                            <div class="dot-level">
+                                                <div class="dot-inner"></div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <p>Early Stage Funding
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 rn-timeline-single no-gradient">
+                                    <div class="rn-timeline">
+                                        <div class="line-custom num11"></div>
+                                        <div class="progress-dot">
+                                            <div class="dot-level">
+                                                <div class="dot-inner"></div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <p>Late Stage Funding
+                                        </div>
+                                    </div>
+                                </div>
 
-	<script src="index.js"></script>
-  </body>
-</html>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rbt-separator-mid">
+            <div class="container">
+                <hr class="rbt-separator m-0">
+            </div>
+        </div>
+        <!--Team section-->
+        <div class="rwt-team-area rn-section-gap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title text-center pt-5">
+                            <h2>
+                                <span style="font-weight:400">MEET </span>
+                                WeGoGym<span style="font-weight:400"> TEAM</span>
+                            </h2>
+                            <div>
+                                <span style="font-weight:400">
+                                    <br>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row--15">
+                    <div class="col-lg-4 col-md-6 col-12 mt--10">
+                        <div class="rn-team team-style-default style-two">
+                            <div class="inner">
+                                <div class="content">
+                                    <div class="bluredImg">
+                                        <img src="https://i.pinimg.com/originals/4f/b9/36/4fb936e6c749b90580e39f9f2cfbf80d.jpg" alt="ahsem0.jpg" class="imgA">
+                                        <img src="https://i.pinimg.com/originals/4f/b9/36/4fb936e6c749b90580e39f9f2cfbf80d.jpg" alt="ahsem1.jpg" class="imgB">
+                                    </div>
+                                    <h2>ASM GONI</h2>
+                                    <h6>CEO and Lead Frontend Developer</h6>
+                                    <div>Meh, he whatever. Needs to hit the gym more lmfaaao. Jk Jk</div>
+                                    <p>
+                                        <br>
+                                        <a href="https://www.linkedin.com/in/sofwanmd13/">LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 mt--10">
+                        <div class="rn-team team-style-default style-two">
+                            <div class="inner">
+                                <div class="content">
+                                    <div class="bluredImg">
+                                        <img src="https://i.pinimg.com/originals/62/dc/45/62dc45b6df4a9c7aaf74471af415186d.jpg" alt="sofwan0.jpg" class="imgA">
+                                        <img src="https://i.pinimg.com/originals/62/dc/45/62dc45b6df4a9c7aaf74471af415186d.jpg" alt="sofwan1.jpg" class="imgB">
+                                    </div>
+                                    <h2>A.B.M. SOFWAN</h2>
+                                    <h6>COO and Lead Backend Developer</h6>
+                                    <div>The cool guy on the team. Lets Goooo!!</div>
+                                    <p>
+                                        <br>
+                                        <a href="https://www.linkedin.com/in/sofwanmd13/">LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 mt--10">
+                        <div class="rn-team team-style-default style-two">
+                            <div class="inner">
+                                <div class="content">
+                                    <div class="bluredImg">
+                                        <img src="https://i.pinimg.com/originals/dc/fe/b6/dcfeb6b62fe59d01b0f193cc254f70a5.jpg" alt="eric0.jpg" class="imgA">
+                                        <img src="https://i.pinimg.com/originals/dc/fe/b6/dcfeb6b62fe59d01b0f193cc254f70a5.jpg" alt="eric1.jpg" class="imgB">
+                                    </div>
+                                    <h2>ERIC LIN</h2>
+                                    <h6>CTO and Lead Frontend Developer</h6>
+                                    <div>The team's smartypants from Cornell University.</div>
+                                    <p>
+                                        <br>
+                                        <a href="https://www.linkedin.com/in/sofwanmd13/">LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rbt-separator-mid">
+            <div class="container">
+                <hr class="rbt-separator m-0">
+            </div>
+        </div>
+        <!--Join Us section-->
+        <div class="rwt-brand-area rn-section-gap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center">
+                            <h2>Join US</h2>
+                            <p>Learn more about WeGoGym Fitness, chat with the team, others in the community, and have your say in shaping the future of the fitness community.
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 mt--40">
+                        <ul class="brand-list brand-style-1">
+                            <li>
+                                <a href="https://twitter.com/BlitzLabs_io" title="WeGoGym on Twitter">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            <li>
+                                <a href="https://t.me/BlitzLabs" title="WeGoGym on Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            <li>
+                                <a href="https://discord.gg/blitzlabs" title="WeGoGym on Facebook">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                            <li>
+                                <a href="https://medium.com/@BlitzLabs.io" title="WeGoGym on Medium">
+                                    <i class="fa-brands fa-medium"></i>
+                                </a>
+                            <li>
+                                <a href="mailto: wegogym@yahoo.com" title="WeGoGym Email">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<footer class="rn-footer footer-style-default variation-two">
+            <div class="rn-callto-action clltoaction-style-default style-7">
+                <div class="container">
+                    <div class="row row--0 align-items-center content-wrapper">
+                        <div class="col-lg-8 col-md-8">
+                            <div class="inner">
+                                <div class="content text-left">
+                                    <div class="logo">
+                                        <a href="./">
+                                            <img class="logo-light logo-height" src="assets/Blitz.svg" alt="Blitz Logo">
+                                            <img class="logo-dark logo-height" src="assets/Blitz-dark.svg" alt="Blitz Logo">
+                                        </a>
+                                    </div>
+                                    <div class="subtitle">
+                                        <div data-hveid="CDIQAA" data-ved="2ahUKEwiOlubvicT3AhVJr6QKHTgHDn8QFSgAegQIMhAA">
+                                            <div data-sokoban-container="SOKOBAN_653929003155823713">
+                                                <div data-content-feature="1">
+                                                    <div>
+                                                        <i>Mass. Heavier than heavy, stronger than strong. I am Iron.</i>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div jscontroller="K6HGfd" id="eob_3" jsdata="fxg5tf;_;BmuW/s" jsaction="rcuQ6b:npT2md" data-ved="2ahUKEwiOlubvicT3AhVJr6QKHTgHDn8Q2Z0BegQIGhAA"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="call-to-btn text-left mt_sm--20 text-lg-right">
+                                <p>
+                                    <a href="https://pancakeswap.finance/swap?outputCurrency=0xf376807dcdbaa0d7fa86e7c9eacc58d11ad710e4&amp;inputCurrency=0xe9e7cea3dedca5984780bafc599bd69add087d56">BUY TOKEN</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="copyright-area copyright-style-one">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-8 col-sm-12 col-12">
+                        <div class="copyright-left">
+                            <div class="copyright-nfa">
+                                <p>Disclaimer: The information provided shall not in any way constitute a recommendation as to whether you should invest in any product discussed. $BLITZ accepts no liability for any loss occasioned to any person acting or refraining from action as a result of any material provided or published.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-12 col-12">
+                        <div class="copyright-right text-center text-lg-end">
+                            <p class="copyright-text">&copy;WeGoGym 2023
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.7.0/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3modal@1.9.5/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.7.1/dist/umd/index.min.js"></script>
+    <script src="main.d094dfa7.js"></script>
